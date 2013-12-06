@@ -1,0 +1,1 @@
+<object id="mks" type="application/x-vmware-vmrc;version=2.5.0.158248" width="1%" height="1%">Warning: You do not have the correct VMWare Remote Console plugin installed. You will not be able to view consoles.</object>

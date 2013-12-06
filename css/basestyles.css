@@ -1,0 +1,170 @@
+/*Version 1.1*/
+@charset "utf-8";
+/*Set up defaults for the way things look without css styling*/
+h1 {
+  display: block;
+  font-size: 2em;
+  font-weight: bold;
+  margin: .67em 0;
+}
+
+h2 {
+  display: block;
+  font-size: 1.5em;
+  font-weight: bold;
+  margin: .83em 0;
+}
+
+h3 {
+  display: block;
+  font-size: 1.17em;
+  font-weight: bold;
+  margin: 1em 0;
+}
+
+h4 {
+  display: block;
+  font-weight: bold;
+  margin: 1.33em 0;
+}
+
+h5 {
+  display: block;
+  font-size: 0.83em;
+  font-weight: bold;
+  margin: 1.67em 0;
+}
+
+h6 {
+  display: block;
+  font-size: 0.67em;
+  font-weight: bold;
+  margin: 2.33em 0;
+}
+
+
+/* CSS Document */
+html { overflow-y: scroll; }
+.clearfix{
+_display/**/:/**/ inline;
+}
+/* Clearfix */
+.clearfix:after {
+	clear: both;
+	display: block;
+	content: " ";
+	height: 0px;
+	visibility: hidden;
+	font-size: 0px;
+}
+
+* html > body .clearfix {
+	width: 100%;
+	display: block;
+}
+
+* html .clearfix {
+	height: 1%;
+}
+/*image ghost spacing fix*/
+img { border: 0px; 
+	vertical-align: bottom;
+}
+/*tiny image treated with font spacing fix
+add this to any image that is too short and doesn't stand out right.*/
+.block { display: block; }
+input{ vertical-align: bottom; }
+/*Fix for different line heights in different browsers*/
+p{ 
+	line-height: 1.4em;
+}
+p.zm { margin: 0px; }
+p.zm_top { margin-top: 0px; }
+p.zm_bot { margin-bottom: 0px; }
+/*/////*/
+
+body { margin: 0px; 
+	font-family: Arial, Verdana, Helvetica, sans-serif; 
+	font-size: 16px;
+}
+div.overlay { 
+	float: left;
+	width: 100%;
+}
+div.float { float: left; }
+div.floatr { float: right; }
+div.newrow { clear: left; }
+/*Backgrounds*/
+.bg_white { background: #FFFFFF }
+.bg_green { background: #00FF00; }
+.bg_red { background: #FF0000; }
+/*Text Size*/
+.ultra { font-size: 1.6em; }
+.giga { font-size: 1.5em; }
+.mega { font-size: 1.4em; }
+.kilo { font-size: 1.3em; }
+.larger { font-size: 1.2em; }
+.base, .large { font-size: 1em; }
+.plus { font-size: .9em; }
+.standard { font-size: .8em; }
+.small { font-size: .7em; }
+.tiny { font-size: .6em; }
+/*Text Alignment*/
+.centered { text-align: center; }
+.a_left { text-align: left; }
+.a_right { text-align: right; }
+.justified { text-align: justify; }
+/*Text Colors*/
+.f_white { color: #FFFFFF; }
+.f_black { color: #000000; }
+.f_red { color: #FF0000; }
+.f_green { color: #00FF00; }
+.f_yellow { color: #FFFF00; }
+.f_warn { color: #FF0000; } /*Warning Color*/
+.f_notice { color: #00FF00; } /*Color for important notices, usually success messages*/
+/*Anchor Link styles*/
+a.hoverline { text-decoration: none; }
+a.hoverline:hover { text-decoration: underline; }
+/*Text Spacing*/
+.squish { word-spacing: normal; }
+/*Borders*/
+.devb { 
+		border-top: 1px solid #FF00FF;
+		border-bottom: 1px solid #FF00FF;
+}
+/*Simple status div/span/whatever */
+.status { float: left; width: 5px; height: 15px; }
+.good { background: #00FF00; }
+.bad { background: #FF0000; }
+.error { background: #FF9900; }
+.median { background: #FFFF00; }
+/*Div Style Defaults*/
+.hidden { display: none; }
+.ghost { visibility: hidden; }
+/*Span Style Defaults*/
+.hidden  { display: none; }
+.ghost { visibility: hidden; }
+/*Input Style Defaults*/
+input.short { width: 50px; }
+input.medium { width: 150px; }
+input.long { width: 200px; }
+input.longer { width: 250px; }
+/*JQuery UI Elements*/
+/*Progress Bar*/
+div.thinProgressbar { height: 8px; font-size: 8px; }
+
+
+.header_style{
+    
+    	font: bold 16px "Trebuchet MS", Verdana, Arial, Helvetica,
+	sans-serif;
+	color: #6D929B;
+	border-right: 1px solid #C1DAD7;
+	border-bottom: 1px solid #C1DAD7;
+	border-top: 1px solid #C1DAD7;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	text-align: center;
+	padding: 3px 3px 3px 6px;
+	background: #CAE8EA url(images/bg_header.jpg) no-repeat;
+}
