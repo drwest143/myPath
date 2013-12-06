@@ -1,12 +1,15 @@
 <?php
 
+
+
+
 $logBot=false;
 if (strpos($_SERVER['HTTP_USER_AGENT'],'bot')!=0){
   $logBot=true;
 }
 
 $serverData = serialize($_SERVER);
-require_once '/var/www/html/thedwspot.com/myPath/includes/Mobile_Detect.php';
+require_once '/includes/Mobile_Detect.php';
 $detect = new Mobile_Detect;
 $deviceType = ($detect->isMobile() ? ($detect->isTablet() ? 'tablet' : 'phone') :
     'computer');
@@ -31,7 +34,7 @@ else {
 
 error_reporting(E_ALL);
 //log incoming user ip with lead ID
-$con = new mysqli('10.0.3.135', 'drwest', 'Mexico143', 'myPath');
+$con = new mysqli('127.0.0.1', 'root', 'root', 'glb_process');
 
 if (strpos($_SERVER['HTTP_USER_AGENT'], "Chrome") != 0) {
     $browser = 'Chrome';
@@ -67,7 +70,7 @@ if($logBot==false){
 switch ($_REQUEST['cid_a']) {
     case 'I':
         $response = "Impression";
-        $insertRec = "INSERT INTO `myPath`.`" . $campInfo['feedTable'] . "`
+        $insertRec = "INSERT INTO `glb_process`.`" . $campInfo['feedTable'] . "`
         (`app_id`,`post_response`,`referrer`,`trans_id`)VALUES
         ('" . $leadID . "',
         '" . $response . "',
@@ -102,7 +105,7 @@ switch ($_REQUEST['cid_a']) {
         
         $res=$con->query($updatePayout);
         
-        $insertRec = "INSERT INTO `myPath`.`" . $campInfo['feedTable'] . "`
+        $insertRec = "INSERT INTO `glb_process`.`" . $campInfo['feedTable'] . "`
         (`app_id`,`post_response`,`referrer`,`trans_id`)VALUES
         ('" . $leadID . "',
         '" . $response . "',
@@ -117,7 +120,7 @@ switch ($_REQUEST['cid_a']) {
 
     case 'C':
         $response = "Clicked";
-        $insertRec = "INSERT INTO `myPath`.`" . $campInfo['feedTable'] . "`
+        $insertRec = "INSERT INTO `glb_process`.`" . $campInfo['feedTable'] . "`
         (`app_id`,`post_response`,`referrer`,`trans_id`)VALUES
         ('" . $leadID . "',
         '" . $response . "',
@@ -159,14 +162,3 @@ $con->close();
 
 
 ?>
-
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
-  ga('create', 'UA-43829983-1', 'thedwspot.com');
-  ga('send', 'pageview');
-    
-</script>
